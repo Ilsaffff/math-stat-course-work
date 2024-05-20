@@ -58,7 +58,8 @@ def massiv_from_df(df, num):
     list_mass = []
     for i in range(1, 9):
         mass = df.iloc[:, i].values.tolist()
-        ind = 1024 - num + 1
+        ind = num
+        # ind = 1024 - num + 1
         new_mass = mass[-ind:] + mass[:-ind]
         list_mass.append(new_mass)
     return list_mass
